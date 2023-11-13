@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Cat Trials</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"/>
+    </head>
+    <body id="score">
+        <h1> Score Board</h1>
+        <table>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Kittens</th>
+                <th scope="col">Coins</th>
+                <th scope="col">Slime</th>
+                <th scope="col">Total Score</th>
+            </tr>
+            {% for score in scores %}
+            <tr>
+                <td>{{ score['username']}}</td>
+                <td>{{ score['kitten']}}</td>
+                <td>{{ score['coin']}}</td>
+                <td>{{ score['slime']}}</td>
+                <td>{{ score['score']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('index') }}">Home</a>
+
+    </body>
+</html>

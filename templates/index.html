@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Trials</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+</head>
+
+<body id="index">
+    <h1>Cat Trials</h1>
+    <section id="gamemode">
+        <div id="story">
+            <a href="{{ url_for('game') }}">Story mode</a>
+        </div>
+        <div id="endless">
+            <a href="{{ url_for('endless') }}">Endless Mode</a>
+        </div>
+        <div id="score_board">
+            <a href="{{ url_for('score_board') }}">Score Board</a>
+        </div>
+        <div id="score_board">
+            <a href="{{ url_for('tutorial') }}">Tutorial</a>
+        </div>
+        <div id="logout">
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </section>
+    <p>Hi Professor! There is a story mode and endless mode. Story mode brings you to a different page depending on what you did in game.</p>
+    <p>There is 3 endings and 1 hidden ending</p>
+    <br/>
+    <p>Endless mode is where the score is stacked and stored in the Score page</p>
+    <p>There is an extra enemy in endless mode. I've made story mode where u only need to survivor 30s to win. It should be relatively easy!</p>
+    <p>You get immunity for 3 sec after taking dmg. You have 9 health! Please also check tutorial</p>
+</body>
+
+</html>

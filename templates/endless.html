@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Game</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"/>
+        <script src="{{url_for('static', filename='test.js')}}" type="module"></script>
+    </head>
+    <body id="endless1">
+        <canvas id='game'width="1280" height="720">
+        </canvas>
+        <p id="outcome"></p>
+        <a href="{{ url_for('index') }}">Home</a>
+    </body>
+</html>

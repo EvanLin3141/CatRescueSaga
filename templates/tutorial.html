@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+</head>
+
+<body id="tupage">
+    <h1>How To Play</h1>
+    <section id="tutorial">
+        <div>
+            <img src="{{url_for('static', filename='guide1.png')}}" />
+        </div>
+        <div>
+            <img src="{{url_for('static', filename='guide2.png')}}" />
+        </div>
+        <div>
+        <img src="{{url_for('static', filename='guide3.png')}}" />
+        </div>
+        <div>
+        <img src="{{url_for('static', filename='guide4.png')}}" />
+        </div>
+    </section>
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+
+</html>

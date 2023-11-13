@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+</head>
+
+<body>
+    <section id="loginHeader">
+        <h1>Cat Trials</h1>
+    </section>
+    <section id='login'>
+        <form class='loginpage' action="" method="post" novalidate>
+            <h2>Login</h2>
+            {{ form.hidden_tag() }}
+            {{ form.username.label() }}
+            {{ form.username() }}
+            <br />
+            {% for error in form.username.errors %}
+            <p class="error">{{ error }}</p>
+            {% endfor %}
+            <br />
+            {{ form.password.label }}
+            {{ form.password() }}
+            {% for error in form.password.errors %}
+            <p class="error">{{ error }}</p>
+            {% endfor %}
+            <br />
+            {{ form.submit()}}
+            {% if message%}
+            <p>{{message}}</p>
+            {% endif %}
+        </form>
+        <p><a href="{{ url_for('register') }}">Make an account</a></p>
+    </section>
+    <p>There is no verification on the register page! So there isnt a need for email. You will have to make your own account. Sorry!</p>
+</body>
+
+</html>
